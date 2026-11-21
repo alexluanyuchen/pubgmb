@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <title>BattleRoyale 3D Pro — PC</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="game" aria-label="3D 游戏场景"></div>
+
+  <div id="hud">
+    <header class="topbar">
+      <div class="brand">BATTLE ROYALE <span>3D PRO</span></div>
+      <div class="mode">PC EDITION · SOLO TRAINING</div>
+      <div class="zone">安全区收缩 <b id="zone">180</b>s</div>
+    </header>
+
+    <div id="crosshair">+</div>
+    <div class="minimap"><div class="map-title">TACTICAL MAP</div><canvas id="mapCanvas" width="160" height="160"></canvas></div>
+
+    <div class="weapon">
+      <div class="weapon-name">PULSE RIFLE <span id="status">READY</span></div>
+      <div class="ammo"><b id="ammo">30</b><span> / </span><span id="reserve">120</span></div>
+      <div class="weapon-note">TRAINING EQUIPMENT</div>
+    </div>
+
+    <footer class="bottom-hud">
+      <div class="vitals">
+        <div class="stat-line"><span>生命值</span><b id="hp">100</b></div>
+        <div class="bar"><i id="hpbar"></i></div>
+        <div class="stat-line armor-line"><span>护甲</span><b id="armor">50</b></div>
+        <div class="bar armor-bar"><i id="armorbar"></i></div>
+      </div>
+      <div class="controls">WASD 移动　SHIFT 奔跑　SPACE 跳跃　C 蹲下<br>鼠标左键发射　右键瞄准　R 换弹　E 互动　ESC 释放鼠标</div>
+      <div class="alive">存活人数 <b id="alive">7</b></div>
+    </footer>
+    <div id="toast" role="status"></div>
+  </div>
+
+  <div id="start">
+    <section class="start-card">
+      <div class="eyebrow">TACTICAL SURVIVAL SIMULATION</div>
+      <h1>BATTLE ROYALE<br><em>3D PRO</em></h1>
+      <p id="intro">电脑版 · 第一人称 · 单机 AI 训练场</p>
+      <div class="feature-row"><span>REAL-TIME 3D</span><span>AI OPPONENTS</span><span>SAFE ZONE</span></div>
+      <button id="play" type="button">进入战场</button>
+      <div class="start-help">建议使用最新版 Chrome 或 Edge，并保持联网以加载 Three.js。</div>
+      <div id="loadError" class="load-error" hidden></div>
+    </section>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

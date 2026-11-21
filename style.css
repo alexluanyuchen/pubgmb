@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#101820;color:#eef6f7;font-family:Inter,"Segoe UI","Microsoft YaHei",sans-serif}
+#game{position:fixed;inset:0}
+#game canvas{display:block;width:100%;height:100%}
+#hud{position:fixed;inset:0;pointer-events:none;display:none}
+.topbar{position:absolute;top:0;left:0;right:0;height:66px;padding:17px 24px;display:flex;align-items:center;gap:28px;background:linear-gradient(180deg,rgba(5,12,17,.82),transparent)}
+.brand{font-weight:900;letter-spacing:2px;font-size:17px}.brand span{color:#61d9ed}
+.mode,.zone{font-size:11px;letter-spacing:1.4px;color:#b7cbd0}.zone{margin-left:auto}.zone b{color:#63e6f1;font-size:16px}
+#crosshair{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:25px;font-weight:300;color:#dffcff;text-shadow:0 0 8px #32d8ee}
+.minimap{position:absolute;right:22px;top:82px;padding:9px;background:rgba(7,17,22,.72);border:1px solid rgba(112,209,220,.3);border-radius:8px}
+.map-title{font-size:9px;letter-spacing:2px;color:#9ebbc0;margin:0 0 6px 2px}#mapCanvas{display:block;width:144px;height:144px}
+.weapon{position:absolute;right:24px;bottom:105px;text-align:right;padding:12px 15px;background:rgba(7,17,22,.68);border-right:3px solid #59d7e8}
+.weapon-name{font-size:11px;letter-spacing:1.5px;color:#b9d2d7}.weapon-name span{color:#6fe3b4;margin-left:9px}.ammo{font-size:28px;font-weight:800;margin-top:3px}.ammo span{font-size:16px;color:#8ea7ad}.weapon-note{font-size:8px;letter-spacing:1.6px;color:#779198}
+.bottom-hud{position:absolute;left:0;right:0;bottom:0;min-height:92px;padding:13px 22px;display:flex;align-items:center;gap:25px;background:linear-gradient(0deg,rgba(5,12,17,.88),transparent)}
+.vitals{width:190px}.stat-line{display:flex;justify-content:space-between;font-size:11px;color:#d2e4e7;margin-bottom:4px}.stat-line b{font-variant-numeric:tabular-nums}.armor-line{margin-top:7px}
+.bar{height:5px;background:rgba(255,255,255,.18);border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;width:100%;background:#5be0a3;transition:width .15s}.armor-bar i{background:#5bc9ed}
+.controls{font-size:10px;line-height:1.8;color:#b4c7cb}.alive{margin-left:auto;font-size:11px;color:#b4c7cb}.alive b{font-size:19px;color:#fff;margin-left:8px}
+#toast{position:absolute;left:50%;top:19%;transform:translateX(-50%);padding:9px 16px;background:rgba(4,15,20,.82);border:1px solid rgba(93,218,232,.45);border-radius:5px;color:#dffaff;font-size:13px;opacity:0;transition:opacity .15s}
+#start{position:fixed;inset:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 40%,rgba(35,73,80,.58),rgba(5,12,17,.96) 72%);z-index:5}
+.start-card{width:min(590px,calc(100% - 36px));padding:42px 42px 34px;border:1px solid rgba(115,207,219,.26);background:rgba(9,20,26,.82);box-shadow:0 25px 90px rgba(0,0,0,.42);text-align:center}
+.eyebrow{font-size:10px;letter-spacing:3px;color:#8bb8c0}h1{font-size:clamp(36px,7vw,58px);line-height:1.03;letter-spacing:2px;margin:20px 0 14px;font-weight:950}h1 em{font-style:normal;color:#65d9e9}
+.start-card p{color:#b9cdd1;font-size:14px}.feature-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:25px 0}.feature-row span{font-size:9px;letter-spacing:1px;padding:7px 9px;border:1px solid rgba(111,200,211,.25);color:#a8cbd0}
+button{border:0;border-radius:4px;padding:14px 44px;background:linear-gradient(100deg,#3abbd0,#65e2d0);color:#07181d;font-size:15px;font-weight:900;letter-spacing:2px;cursor:pointer;box-shadow:0 8px 28px rgba(47,190,203,.2)}
+button:hover{filter:brightness(1.1);transform:translateY(-1px)}button:active{transform:translateY(0)}button:disabled{opacity:.55;cursor:wait}
+.start-help{margin-top:20px;font-size:10px;line-height:1.6;color:#7f9ba1}.load-error{margin-top:15px;color:#ffb5a9;font-size:12px;line-height:1.6}
+@media(max-width:620px){.topbar{padding:13px;height:54px;gap:10px}.brand{font-size:12px}.mode{display:none}.zone{font-size:9px}.minimap{right:10px;top:65px}.minimap canvas{width:105px;height:105px}.bottom-hud{padding:10px;gap:12px}.vitals{width:125px}.controls{font-size:8px}.alive{display:none}.weapon{right:10px;bottom:105px}.start-card{padding:30px 18px}}
